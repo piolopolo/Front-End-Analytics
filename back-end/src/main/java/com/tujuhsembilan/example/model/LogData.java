@@ -1,0 +1,24 @@
+package com.tujuhsembilan.example.model;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import lombok.Data;
+
+@Entity
+@Data
+public class LogData {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    private String message;
+    private String source;
+    private int lineno;
+    private int colno;
+    private String error;
+    private String userAgent;
+    private String url;
+    private String timestamp;
+}
